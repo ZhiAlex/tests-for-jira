@@ -14,9 +14,6 @@ public class BaseTest {
     static void beforeAll() {
         Configuration.holdBrowserOpen = false;
         Configuration.browserSize = "1920x1080";
-//        open("https://edujira.ifellow.ru/");
-//        authPage.login();
-//        authPage.clickB();
     }
 
     @AfterEach
