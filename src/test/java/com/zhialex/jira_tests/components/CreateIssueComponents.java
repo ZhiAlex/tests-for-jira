@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class CreateIssueComponents {
 
-    SelenideElement
+    private SelenideElement
             chooseProjectInput = $("#project-field"),
             chooseIssueTypeInput = $("#issuetype-field"),
             summaryInput = $("#summary"),

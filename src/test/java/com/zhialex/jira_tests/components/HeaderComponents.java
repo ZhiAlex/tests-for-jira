@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class HeaderComponents {
 
-    SelenideElement createIssueButton = $("#create_link");
+    private SelenideElement createIssueButton = $("#create_link");
 
     public void createIssue() {
         createIssueButton.click();
