@@ -1,10 +1,12 @@
 package com.zhialex.jira_tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
+import com.zhialex.jira_tests.helpers.Attach;
 import com.zhialex.jira_tests.pages.AuthPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class BaseTest {
 
@@ -18,6 +20,9 @@ public class BaseTest {
 
     @AfterEach
     void closeBrowser() {
-        Selenide.closeWebDriver();
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        closeWebDriver();
     }
 }

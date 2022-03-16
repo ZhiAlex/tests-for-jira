@@ -3,8 +3,6 @@ package com.zhialex.jira_tests.tests.project;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.text;
-
 public class PassBugStatusesTest extends ProjectBaseTest {
 
     @Test
@@ -30,6 +28,6 @@ public class PassBugStatusesTest extends ProjectBaseTest {
         taskPage
                 .clickWorkflow()
                 .chooseStatus(status)
-                .getStatusElement().lastChild().shouldHave(text(status));
+                .checkDoneStatus(status);
     }
 }
